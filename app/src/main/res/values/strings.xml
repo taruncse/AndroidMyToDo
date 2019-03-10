@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MyToDo</string>
+    <string name="drawer_item_my_documents">My Documents</string>
+    <string name="drawer_item_unfiled">Unfiled</string>
+    <string name="drawer_item_shared_with_me">Shared with me</string>
+    <string name="drawer_item_logout">Logout</string>
+
 </resources>

@@ -43,4 +43,14 @@ dependencies {
 
     //Animator
     implementation "com.mikepenz:itemanimators:1.1.0"
+
+    // https://github.com/mikepenz/Android-Iconics
+    implementation 'com.mikepenz:iconics-core:3.0.4@aar'
+    implementation 'com.mikepenz:iconics-views:3.0.4@aar'
+    implementation 'com.mikepenz:google-material-typeface:3.0.1.2.original@aar'
+    implementation 'com.mikepenz:fontawesome-typeface:5.0.13.0@aar'
+
+    // to make initial as image
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+
 }
