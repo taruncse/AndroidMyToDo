@@ -7,6 +7,9 @@ import android.view.WindowManager;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public abstract class CoreActivity extends AppCompatActivity /*implements ColorPickerDialogListener*/ {
 
@@ -15,7 +18,7 @@ public abstract class CoreActivity extends AppCompatActivity /*implements ColorP
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        setTheme(ThemeUtils.styleId, ThemeUtils.colorPrimaryDark);
+        //setTheme(ThemeUtils.styleId, ThemeUtils.colorPrimaryDark);
         super.onCreate(savedInstanceState);
     }
 
@@ -42,7 +45,7 @@ public abstract class CoreActivity extends AppCompatActivity /*implements ColorP
      * Load fragment by replacing all previous fragments
      * @param fragment
      */
-   /* public void loadFragment(Fragment fragment) {
+    public void loadFragment(Fragment fragment) {
         if (fragment == null) return;
         FragmentManager fragmentManager = getSupportFragmentManager();
         // clear back stack
@@ -61,7 +64,7 @@ public abstract class CoreActivity extends AppCompatActivity /*implements ColorP
         // change than we want now.
         t.commitAllowingStateLoss();
     }
-
+/*
     /**
      * Load Fragment on top of other fragments
      * @param fragment

@@ -1,12 +1,13 @@
 package com.tkb.mytodo;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 
+import org.androidannotations.annotations.EActivity;
 
-public class MainActivity extends AppCompatActivity {
+//@EActivity(R.layout.activity_main)
+public class MainActivity extends CoreActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

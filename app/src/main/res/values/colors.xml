@@ -3,4 +3,14 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="black">@android:color/black</color>
+    <color name="white">@android:color/white</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="colorActivatedBackground">#E8EAF6</color>
+
+    <color name="material_drawer_header_selection_subtext">#E8EAF6</color>
+    <color name="material_drawer_header_selection_text">#E8EAF6</color>
+    <color name="material_drawer_selected">#E8EAF6</color>
+
 </resources>

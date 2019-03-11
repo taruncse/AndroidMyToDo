@@ -1,5 +1,6 @@
 package com.tkb.mytodo;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.CompoundButton;
@@ -20,6 +21,7 @@ import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+import com.tkb.mytodo.today.TodayActivity;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -27,9 +29,9 @@ import androidx.appcompat.widget.Toolbar;
 
 public class DrawerManager  implements OnCheckedChangeListener {
 
-    private static final int MY_DOCUMENTS = 1;
-    private static final int UNFILED = 2;
-    private static final int SHARED_WITH_ME = 3;
+    private static final int TODAY = 1;
+    private static final int ALL_TASKS = 2;
+    private static final int ARCHIVED = 3;
     private static final int LOGOUT = 20;
 
     private AccountHeader headerResult = null;
@@ -52,7 +54,7 @@ public class DrawerManager  implements OnCheckedChangeListener {
                     activity.onBackPressed();
                     return true;
                 })
-                .addDrawerItems(getItem(MY_DOCUMENTS), getItem(UNFILED), getItem(SHARED_WITH_ME),
+                .addDrawerItems(getItem(TODAY), getItem(ALL_TASKS), getItem(ARCHIVED),
                         new DividerDrawerItem(), getItem(LOGOUT)
                 ) // add the items we want to use with our Drawer
                 .withOnDrawerItemClickListener((view, position, drawerItem) -> {
@@ -102,18 +104,18 @@ public class DrawerManager  implements OnCheckedChangeListener {
     }
     private IDrawerItem getItem(final int identifier) {
         switch (identifier) {
-            case MY_DOCUMENTS: return new PrimaryDrawerItem().withName(R.string.drawer_item_my_documents).withIcon(GoogleMaterial.Icon.gmd_folder_open).withIdentifier(MY_DOCUMENTS).withSelectedIconColorRes(ThemeUtils.colorAccent).withSelectedTextColorRes(ThemeUtils.colorAccent);
-            case UNFILED : return new PrimaryDrawerItem().withName(R.string.drawer_item_unfiled)
+            case TODAY: return new PrimaryDrawerItem().withName(R.string.drawer_item_today).withIcon(GoogleMaterial.Icon.gmd_folder_open).withIdentifier(TODAY).withSelectedIconColorRes(ThemeUtils.colorAccent).withSelectedTextColorRes(ThemeUtils.colorAccent);
+            case ALL_TASKS: return new PrimaryDrawerItem().withName(R.string.drawer_item_all_task)
                     .withIcon(GoogleMaterial.Icon.gmd_assignment)
-                    .withIdentifier(UNFILED)
+                    .withIdentifier(ALL_TASKS)
                     .withSelectedIconColorRes(ThemeUtils.colorAccent)
                     .withSelectedTextColorRes(ThemeUtils.colorAccent)
                     .withDisabledIconColorRes(ThemeUtils.disabled)
                     .withDisabledTextColorRes(ThemeUtils.disabled)
                     .withBadgeStyle(new BadgeStyle().withTextColor(Color.WHITE).withColorRes(R.color.md_red_500));
-            case SHARED_WITH_ME: return new PrimaryDrawerItem().withName(R.string.drawer_item_shared_with_me)
+            case ARCHIVED: return new PrimaryDrawerItem().withName(R.string.drawer_item_archived)
                     .withIcon(GoogleMaterial.Icon.gmd_folder_shared)
-                    .withIdentifier(SHARED_WITH_ME)
+                    .withIdentifier(ARCHIVED)
                     .withSelectedIconColorRes(ThemeUtils.colorAccent)
                     .withSelectedTextColorRes(ThemeUtils.colorAccent)
                     .withDisabledIconColorRes(ThemeUtils.disabled)
@@ -132,6 +134,7 @@ public class DrawerManager  implements OnCheckedChangeListener {
     private void onClickedItem(long identifier) {
         if (identifier == 1) {
             //activity.loadFragment((new FileBrowserFactory().getFragment(FileBrowserFactory.SYSTEM)));
+            activity.startActivity(new Intent(activity, TodayActivity.class));
         }else if (identifier == 10 ) {
            // activity.loadFragment(EntityFragment_.builder().build());
         } else if (identifier == LOGOUT) {
