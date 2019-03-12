@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.tkb.mytodo.CoreActivity;
+import com.tkb.mytodo.base.CoreActivity;
 import com.tkb.mytodo.R;
 import androidx.lifecycle.ViewModelProviders;
 

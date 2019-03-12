@@ -1,5 +1,7 @@
 package com.tkb.mytodo;
 
+import com.tkb.mytodo.fragments.TodayFragment_;
+
 import androidx.fragment.app.Fragment;
 
 
@@ -15,8 +17,7 @@ public class FileBrowserFactory {
     }
     public Fragment getFragment(int level, String fileId, boolean isTag) {
         if (level == TODAY) {
-           // return SharedWithMeFragment_.builder().build();
-            return null;
+            return TodayFragment_.builder().build();
         } else if (level == ALL_TASKS) {
             return null;
         } else if (level == ARCHIVED) {

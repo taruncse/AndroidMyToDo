@@ -1,8 +1,10 @@
-package com.tkb.mytodo;
+package com.tkb.mytodo.base;
 
 import android.os.Build;
 import android.os.Bundle;
 import android.view.WindowManager;
+
+import com.tkb.mytodo.R;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;

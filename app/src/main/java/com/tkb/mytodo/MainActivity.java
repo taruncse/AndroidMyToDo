@@ -4,22 +4,32 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 
-import org.androidannotations.annotations.EActivity;
+import com.tkb.mytodo.base.CoreActivity;
 
-//@EActivity(R.layout.activity_main)
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Bean;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
+
+@EActivity(R.layout.activity_main)
 public class MainActivity extends CoreActivity {
+
+    @ViewById(R.id.toolbar)
+    Toolbar toolbar;
+    Bundle savedInstanceState;
+
+    @Bean
+    DrawerManager drawerManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        this.savedInstanceState = savedInstanceState;
+    }
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-
-        DrawerManager drawerManager =  new DrawerManager(this);
+    @AfterViews
+    void init() {
         drawerManager.setupHeader(savedInstanceState);
-
         drawerManager.setupDrawer(savedInstanceState, toolbar);
-
     }
 }

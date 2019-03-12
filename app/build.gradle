@@ -9,6 +9,19 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        "logLevel"           : "DEBUG",
+                        "logAppenderConsole" : "true",
+                        "trace"              : "false",
+                        "androidManifestFile": "$projectDir/src/main/AndroidManifest.xml".toString(),
+                        "resourcePackageName": android.defaultConfig.applicationId]
+
+            }
+        }
     }
     buildTypes {
         release {
@@ -58,4 +71,8 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-rc01'
     implementation 'androidx.paging:paging-runtime:2.0.0-rc01'
 
+
+    //Bottom Sheet layout
+    implementation 'com.flipboard:bottomsheet-core:1.5.3'
+    implementation 'com.flipboard:bottomsheet-commons:1.5.3' // optional
 }
