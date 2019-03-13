@@ -1,6 +1,7 @@
 package com.tkb.mytodo;
 
-import com.tkb.mytodo.fragments.TodayFragment_;
+
+import com.tkb.mytodo.today.TodayFragment_;
 
 import androidx.fragment.app.Fragment;
 

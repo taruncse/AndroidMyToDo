@@ -31,5 +31,9 @@ public class MainActivity extends CoreActivity {
     void init() {
         drawerManager.setupHeader(savedInstanceState);
         drawerManager.setupDrawer(savedInstanceState, toolbar);
+
+        //Load Initial fragment
+        loadFragment((new FileBrowserFactory().getFragment(FileBrowserFactory.TODAY)));
+
     }
 }
