@@ -43,7 +43,7 @@ public class TodayFragment extends CoreFragment {
         LoggingClickCounterViewModelFactory factory =
                 new LoggingClickCounterViewModelFactory(new ClickLoggingInterceptor());
 
-        viewModel = ViewModelProviders.of(this, factory).get(LoggingClickCounterViewModel.class);
+        viewModel = ViewModelProviders.of(getActivity(), factory).get(LoggingClickCounterViewModel.class);
         displayClickCount(viewModel.getCount());
     }
 
