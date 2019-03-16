@@ -1,3 +1,4 @@
+/*
 package com.tkb.mytodo.today;
 
 import android.util.Log;
@@ -8,4 +9,4 @@ public class ClickLoggingInterceptor {
     public void intercept(int clickCount) {
         Log.d(LOG_TAG, "processed click " + clickCount);
     }
-}
+}*/

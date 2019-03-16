@@ -47,7 +47,7 @@
     <com.mikepenz.iconics.view.IconicsImageView
         android:id="@+id/txtNext"
         app:iiv_icon="faw-angle-right"
-        app:iiv_color="@color/black"
+        app:iiv_color="@color/md_black_1000"
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:layout_marginEnd="30dp"

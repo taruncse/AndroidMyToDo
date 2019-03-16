@@ -1,3 +1,4 @@
+/*
 package com.tkb.mytodo.today;
 
 import android.os.Bundle;
@@ -7,19 +8,27 @@ import android.widget.TextView;
 
 import com.tkb.mytodo.base.CoreActivity;
 import com.tkb.mytodo.R;
+
+import org.androidannotations.annotations.ViewById;
+
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class TodayActivity extends CoreActivity {
 
-    protected TextView clickCountText;
-    protected Button increment_button;
+   */
+/* protected TextView clickCountText;
+    protected Button increment_button;*//*
+
     private ClickCounterViewModel viewModel;
+    @ViewById(R.id.taskRecyclerView)
+    RecyclerView taskRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_today);
-        clickCountText = findViewById(R.id.click_count_text);
+        //clickCountText = findViewById(R.id.click_count_text);
 
         LoggingClickCounterViewModelFactory factory =
                 new LoggingClickCounterViewModelFactory(new ClickLoggingInterceptor());
@@ -34,6 +43,6 @@ public class TodayActivity extends CoreActivity {
     }
 
     private void displayClickCount(int clickCount) {
-        clickCountText.setText(String.valueOf(clickCount));
+       // clickCountText.setText(String.valueOf(clickCount));
     }
-}
+}*/

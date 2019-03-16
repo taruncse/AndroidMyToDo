@@ -1,3 +1,4 @@
+/*
 package com.tkb.mytodo.today;
 
 public class LoggingClickCounterViewModel extends ClickCounterViewModel {
@@ -12,4 +13,4 @@ public class LoggingClickCounterViewModel extends ClickCounterViewModel {
         super.setCount(count);
         loggingInterceptor.intercept(count);
     }
-}
+}*/
