@@ -41,7 +41,7 @@ public class TodayFragment extends CoreFragment {
     @Override
     public void onResume() {
         super.onResume();
-       // setTitle(getString(R.string.drawer_item_today));
+        setTitle(getString(R.string.drawer_item_today));
     }
 
     public TodayFragment() {
