@@ -18,10 +18,10 @@
 * Maintain local storage 
 * Firbase to manage user and data
 * Libraries : 
-  ** Android Annotation
-  ** Dagger
-  ** RXJava
-  ** Material Drawer
-  ** MVVM
-  ** Android Architectural components
-  ** Firebase
+  * * Android Annotation
+  * * Dagger
+  * * RXJava
+  * * Material Drawer
+  * * MVVM
+  * * Android Architectural components
+  * * Firebase
